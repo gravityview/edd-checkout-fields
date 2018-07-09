@@ -297,7 +297,7 @@ class CFM_Form {
 			}
 
 			$templates_to_exclude = apply_filters( 'cfm_templates_to_exclude_render_' . $this->name() . '_form_admin', array(), $profile );
-			if ( is_object( $field ) && ( ( is_array( $templates_to_exclude ) && in_array( $field->template(), $templates_to_exclude ) ) || ! $field->is_public() ) ) {
+			if ( is_object( $field ) && ( ( is_array( $templates_to_exclude ) && in_array( $field->template(), $templates_to_exclude ) ) ) ) {
 				continue;
 			} else if ( is_object( $field ) && $profile && ( ! $field->is_meta() || $field->meta_type() !== 'user' ) ){
 				continue;
